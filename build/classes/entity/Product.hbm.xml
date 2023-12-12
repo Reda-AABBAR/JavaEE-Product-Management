@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.Product" table="products">
+        <id name="id" type="long">
+            <column name="id_product" />
+            <generator class="identity" />
+        </id>
+
+        <property name="name" type="string">
+            <column name="product_name" />
+        </property>
+        <many-to-one name="type" class="entity.TypeProduit" column="type_id"/>
+        <!-- <set name="Product" table="Creation" inverse="true">
+			<key column="id_product"/>
+			<one-to-many class="entity.Creation"/>
+		</set> -->
+    </class>
+</hibernate-mapping>

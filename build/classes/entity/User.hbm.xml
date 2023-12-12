@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.User" table="users">
+        <id name="id" type="long">
+            <column name="id_user" />
+            <generator class="identity" />
+        </id>
+
+        <property name="firstName" type="string">
+            <column name="f_name" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="l_name" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        
+       <!--  <set name="User" table="Creation" inverse="true">
+			<key column="id_user"/>
+			<one-to-many class="entity.Creation"/>
+		</set> -->
+    </class>
+</hibernate-mapping>

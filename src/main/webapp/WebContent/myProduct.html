@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product System Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for product display */
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .product-container {
+            width: 100%;
+        }
+
+        /* Custom styles for header */
+        .header {
+            background-color: #007bff; /* Bootstrap primary color */
+            padding: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            float: left;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">Product System Management</div>
+        <div class="nav-buttons">
+            
+            <button class="btn" onclick="pagination('addProduct.html')" >Add Product</button>
+            <button class="btn" onclick="pagination('ProductDesply.html')">See Products</button>
+            <button class="btn" onclick="pagination('myProduct.html')">See Your Products</button>
+            <button class="btn" onclick="pagination('logout')">logout</button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Your products</h2>
+        <div id="contain" class="row">
+            <!-- Your product display content goes here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="myProduct.js"></script>
+</body>
+
+</html>
